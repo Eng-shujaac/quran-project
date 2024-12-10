@@ -1,33 +1,101 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quran Clone</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <title>Quran Surah List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        ul {
+            width: 300px;
+            background: teal;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 20px;
+            color: white;
+            list-style: none;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        li {
+            background-color: white;
+            color: black;
+            margin: 10px 0px;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.4em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        li:hover {
+            background-color: #ddd;
+        }
+        ul h2 {
+            text-align: center;
+            font-size: 2em;
+            color: white;
+        }
+        ul li span:first-of-type {
+            font-size: 1.5em;
+        }
+        #surahDetails {
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #surahDetails h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        #surahDetails p {
+            margin: 10px 0;
+            line-height: 1.6;
+            font-size: 1.2em;
+        }
+        audio {
+            display: block;
+            margin: 20px auto;
+            outline: none;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            height: 40px;
+        }
+        audio::-webkit-media-controls-panel {
+            background-color: teal;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="quran-img">
-        <img src="./images/quran.png"></img>
-    </div>
-    <h1 class="noble">The Noble Quran</h1>
-    <div class="searchArea">
-        <input type="text" name="search" id="search" placeholder=' search "Nooh" ' autocomplete="off">
-       
-    </div>
-
-    <img src="./images/loader.gif" alt="" id="loader">
-
-    <div class="container" dir="ltr" lang="eng">
-
-     
-        
-
-    </div>
-
-
-    <script src="./scripts/quran.js"></script>
+    <ul>
+        <h2>All Surah</h2>
+        <!-- Liiska suuradaha waxaa lagu dari doonaa halkan -->
+    </ul>
     
+    <div id="surahDetails">
+        <!-- Faahfaahinta suuradda iyo maqalka waxaa lagu soo bandhigi doonaa halkan -->
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
